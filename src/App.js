@@ -1,15 +1,15 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import Home from './Home';
-import NotFound from './NotFound';
+import Home from './pages/Home';
+import PageNotFound from './pages/PageNotFound';
 
 function App() {
   return (
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route component={NotFound} />
+        <Route path ="*" component={PageNotFound} />
       </Switch>
     </BrowserRouter>
   );
